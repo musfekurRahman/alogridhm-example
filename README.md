@@ -1,1 +1,1 @@
-# alogridhm-example
+# Alogridhm Example
