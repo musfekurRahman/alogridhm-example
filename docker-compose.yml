@@ -1,0 +1,39 @@
+version: "3.7"
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - ./code:/code
+      - ./config/site.conf:/etc/nginx/conf.d/site.conf
+    networks:
+      - 18series
+    ports:
+      - "8180:80"
+      - "8181:8186"
+    links:
+      - php
+    depends_on:
+      - php
+  composer:
+    image: composer
+    container_name: php-composer
+    command: install
+    volumes:
+      - ./code:/app
+  php:
+    container_name: php74
+    image: php:7.4.0-fpm
+    volumes:
+      - ./code:/code
+      - ./php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+    networks:
+      - 18series
+    ports:
+      - "9000:9000"
+networks:
+  18series:
+    external: true
+    driver: bridge
