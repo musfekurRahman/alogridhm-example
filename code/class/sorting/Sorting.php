@@ -13,10 +13,17 @@ class Sorting implements SortingInterface
         $this->createInstance();
     }
 
-    private function createInstance()
+    private function createInstance() //using factory design pattern
     {
-        if ($this->type == 'bubble') {
-            $this->class = new Bubble();
+        switch ($this->type){
+            case 'bubble';
+                $this->class = new Bubble();
+                break;
+            case 'insertion';
+                $this->class = new Insertion();
+                break;
+            default:
+                $this->class = new Bubble();
         }
 
     }

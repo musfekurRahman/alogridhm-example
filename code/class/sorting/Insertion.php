@@ -2,7 +2,7 @@
 
 namespace Algorithm\sorting;
 
-class Bubble
+class Insertion
 {
     private array $input = [];
 
@@ -14,9 +14,7 @@ class Bubble
 
     public function sort()
     {
-        foreach ($this->input as $i){
-            $temp=$i;
-        }
+
     }
 
     public function show(): array
