@@ -2,7 +2,7 @@
 
 namespace Algorithm\sorting;
 
-class Bubble implements SortingInterface
+class Bubble implements ClassInterface
 {
     private array $input = [];
 

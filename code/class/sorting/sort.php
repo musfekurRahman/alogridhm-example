@@ -2,7 +2,7 @@
 
 namespace Algorithm\sorting;
 
-class Sorting implements SortingInterface
+class sort implements BaseInterface
 {
     private string $type;
     private object $class;
@@ -27,19 +27,24 @@ class Sorting implements SortingInterface
         }
     }
 
-    private function sort()
+    public function sort($array)
+    {
+        $this->set($array);
+        $this->sorting();
+       return $this->get();
+    }
+    private function sorting()
     {
         $this->class->sort();
     }
 
-    public function set($array)
+    private function set($array)
     {
         $this->class->set($array);
-        $this->sort();
     }
 
-    public function get()
+    private function get()
     {
-        return $this->class->get();;
+        return $this->class->get();
     }
 }
