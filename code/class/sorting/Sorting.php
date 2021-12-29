@@ -38,8 +38,8 @@ class Sorting implements SortingInterface
         $this->sort();
     }
 
-    public function show()
+    public function get()
     {
-        return $this->class->show();;
+        return $this->class->get();;
     }
 }

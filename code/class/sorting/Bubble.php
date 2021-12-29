@@ -2,15 +2,13 @@
 
 namespace Algorithm\sorting;
 
-class Bubble
+class Bubble implements SortingInterface
 {
     private array $input = [];
-
 
     public function set($array): bool
     {
         $this->input = $array;
-
         return true;
     }
 
@@ -38,7 +36,7 @@ class Bubble
         $this->input[$next] = $temp;
     }
 
-    public function show(): array
+    public function get(): array
     {
         return $this->input;
     }

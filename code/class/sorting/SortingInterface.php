@@ -3,7 +3,7 @@
 namespace Algorithm\sorting;
 interface SortingInterface
 {
-    function show();
+    function get();
 
     function set($array);
 
