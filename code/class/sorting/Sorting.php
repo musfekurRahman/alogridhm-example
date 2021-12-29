@@ -15,7 +15,7 @@ class Sorting implements SortingInterface
 
     private function createInstance() //using factory design pattern
     {
-        switch ($this->type){
+        switch ($this->type) {
             case 'bubble';
                 $this->class = new Bubble();
                 break;
@@ -25,12 +25,17 @@ class Sorting implements SortingInterface
             default:
                 $this->class = new Bubble();
         }
+    }
 
+    private function sort()
+    {
+        $this->class->sort();
     }
 
     public function set($array)
     {
         $this->class->set($array);
+        $this->sort();
     }
 
     public function show()
