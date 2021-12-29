@@ -16,20 +16,26 @@ class Bubble
 
     public function sort()
     {
-        $count =count($this->input);
-        for ($i = 1; $i < $count; $i++) {
-            for($j=$i; $j<$count; $j++){
-                if ($this->input[$j] < $this->input[$j-1]) {
-                    $this->swap($j-1,$j);
+        $count = count($this->input);
+        for ($i = 0; $i < $count; $i++) {
+            $swap = false;
+            for ($j = 0; $j < $count - $i - 1; $j++) {
+                if ($this->input[$j] > $this->input[$j + 1]) {
+                    $this->swap($j, $j + 1);
+                    $swap = true;
                 }
             }
-
+            if ($swap == false) {
+                break;
+            }
         }
     }
-    private function swap($prev,$next){
+
+    private function swap($prev, $next)
+    {
         $temp = $this->input[$prev];
-        $this->input[$prev] = $this->input[$next] ;
-        $this->input[$next]= $temp;
+        $this->input[$prev] = $this->input[$next];
+        $this->input[$next] = $temp;
     }
 
     public function show(): array
