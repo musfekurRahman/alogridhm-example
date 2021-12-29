@@ -15,12 +15,15 @@ class sort implements BaseInterface
 
     private function createInstance() //using factory design pattern
     {
-        switch ($this->type) {
+        switch (strtolower($this->type)) {
             case 'bubble';
                 $this->class = new Bubble();
                 break;
             case 'insertion';
                 $this->class = new Insertion();
+                break;
+            case 'selection';
+                $this->class = new Selection();
                 break;
             default:
                 $this->class = new Bubble();
