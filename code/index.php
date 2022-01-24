@@ -1,9 +1,15 @@
 <?php
-
-use Algorithm\sorting\sort;
+use Algorithm\problems\base;
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
-$sorting = new sort('selection');//bubble, insertion,selection
+
+$class = new base('ValidParentheses');
 echo "<pre>";
-print_r($sorting->sort([5, 2, 9, 7, 6]));
+print_r($class->process("}}"));
+print_r($class->process("(){}[]"));
+print_r($class->process("[{()}]"));
+print_r($class->process("(]"));
+print_r($class->process("({)}"));
+print_r($class->process("{[]}"));
+
 echo "</pre>";
