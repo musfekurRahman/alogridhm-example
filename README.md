@@ -12,3 +12,5 @@ ___
 * Longest Common Prefix
 * Single Number
 * Maximum Subarray
+* Rotate Array
+* Best Time to Buy and Sell Stock II

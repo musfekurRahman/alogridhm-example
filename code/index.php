@@ -4,9 +4,13 @@ use Algorithm\problems\base;
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
 
+$class = new base('MaxProfit');
+print_r($class->process([7,1,5,3,6,4]));
+
+/*
 $class = new base('RotateArray');
 print_r($class->process([[1,2,3,4,5,6,7],3]));
-
+*/
 /*
 $class = new base('MaxSubArray');
 print_r($class->process([-2,1,-3,4,-1,2,1,-5,4]));
