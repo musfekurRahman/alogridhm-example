@@ -10,3 +10,5 @@ ___
 **PROBLEMS**:
 * Valid Parentheses
 * Longest Common Prefix
+* Single Number
+* Maximum Subarray
