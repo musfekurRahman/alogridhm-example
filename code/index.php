@@ -1,12 +1,16 @@
 <?php
 use Algorithm\problems\base;
+//use Algorithm\binaryTree\base;
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
+$class = new base('PlusOne');
+print_r($class->process([5,8,7,8,8]));
 
+/*
 $class = new base('MaxProfit');
 print_r($class->process([7,1,5,3,6,4]));
-
+*/
 /*
 $class = new base('RotateArray');
 print_r($class->process([[1,2,3,4,5,6,7],3]));
@@ -20,7 +24,7 @@ $class = new base('SingleNumber');
 print_r($class->process([4,1,2,1,2]));
 */
 /*
-$class = new base('LongestCommonPrefix');
+$class = new base('BinaryTreeArray');
 print_r($class->process(["flower","flow","flight"]));
 */
 /*
