@@ -4,8 +4,8 @@ use Algorithm\problems\base;
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
-$class = new base('PlusOne');
-print_r($class->process([5,8,7,8,8]));
+$class = new base('AddBinary');
+print_r($class->process(["1111","1111"]));
 
 /*
 $class = new base('MaxProfit');
