@@ -16,3 +16,4 @@ ___
 * Best Time to Buy and Sell Stock II
 * Plus One
 * Add Binary
+* SqrtX
