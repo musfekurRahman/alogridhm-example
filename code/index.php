@@ -4,7 +4,7 @@ use Algorithm\problems\base;
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
-$class = new base('ClimbingStairs');
+$class = new base('MargeTwoSortedList');
 print_r($class->process(2));
 
 /*
