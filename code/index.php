@@ -4,8 +4,8 @@ use Algorithm\problems\base;
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
-$class = new base('SqrtX');
-print_r($class->process(9));
+$class = new base('ClimbingStairs');
+print_r($class->process(2));
 
 /*
 $class = new base('MaxProfit');
