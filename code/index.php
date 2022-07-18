@@ -4,8 +4,8 @@ use Algorithm\problems\base;
 
 require_once dirname(__FILE__) . '/vendor/autoload.php';
 
-$class = new base('MargeTwoSortedList');
-print_r($class->process(2));
+$class = new base('ValidPalindrome');
+print_r($class->process(' '));
 
 /*
 $class = new base('MaxProfit');

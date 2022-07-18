@@ -18,3 +18,4 @@ ___
 * Add Binary
 * SqrtX
 * ClimbingStairs
+* ValidPalindrome

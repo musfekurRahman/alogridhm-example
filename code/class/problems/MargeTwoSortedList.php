@@ -1,7 +1,6 @@
 <?php
 
 namespace Algorithm\problems;
-
 class MargeTwoSortedList implements ClassInterface
 {
     private $input;
@@ -14,22 +13,30 @@ class MargeTwoSortedList implements ClassInterface
 
     public function process()
     {
-        $n = $this->input;
-        if ($n <= 1) return 1;
-        $way[0] = 1;
-        $way[1] = 2;
-        for ($i = 2; $i < $n; $i++) {
-            echo ($i - 1 ).":".$way[$i - 1]. ";".($i - 2).":".$way[$i - 2]." || ".($way[$i - 1] + $way[$i - 2])."<br/>";
-            $way[] = $way[$i - 1] + $way[$i - 2];
-        }
+        $list1 = $this->input[0];
+        $list2 = $this->input[1];
+        $first = new ListNode(1,2);
+        $second = new ListNode(4,null);
+        $second->next = $first->next;
+
+
+
+
         echo "<pre>";
-        print_r($way);
-        exit;
-        return $way;
+print_r([$second,$list2]); exit;
+        return $list1;
     }
 
     public function get()
     {
         return $this->input;
+    }
+}
+class ListNode {
+    public $val = 0;
+    public $next = null;
+    function __construct($val = 0, $next = null) {
+        $this->val = $val;
+        $this->next = $next;
     }
 }
